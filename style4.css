@@ -1,0 +1,240 @@
+@charset "utf-8";
+
+body {
+    margin: 0;
+    padding: 0;
+    color: rgb(224, 222, 220);
+    font-family: sans-serif;
+    background-image: url(https://static.vecteezy.com/ti/vetor-gratis/p1/7523401-placa-de-circuito-tecnologia-fundo-roxo-e-azul-bandeira-luz-conceito-sistema-eletronico-vetor.jpg);
+}
+
+header {
+    background-color: #ff0000;
+    color: #000000;
+    text-shadow: 1px 3px 6px #6200ff; /* Cor do texto do cabeçalho */
+    padding: 480px 0; /* Espaçamento interno do cabeçalho */
+    position: fixed; /* Fixa o cabeçalho no topo da página */
+    width: 100%; /* Largura total do cabeçalho */
+    top: 0; /* Posiciona o cabeçalho no topo */
+    z-index: 1000
+}
+
+.btn2 {
+    position: relative;
+    display: inline-block;
+    padding: 7px 25px;
+    border: 2px solid #fefefe;
+    text-transform: uppercase;
+    color: #fefefe;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 20px;
+    transition: 0.3s;
+    margin-left: 120px;
+  }
+  
+  .btn2::before {
+    content: '';
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    width: calc(100% + 4px);
+    height: calc(100% - -2px);
+    background-color: #000000;
+    transition: 0.3s ease-out;
+    transform: scaleY(1);
+  }
+  
+  .btn2::after {
+    content: '';
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    width: calc(100% + 4px);
+    height: calc(100% - 50px);
+    background-color: #000000;
+    transition: 0.3s ease-out;
+    transform: scaleY(1);
+  }
+  
+  .btn2:hover::before {
+    transform: translateY(-25px);
+    height: 0;
+  }
+  
+  .btn2:hover::after {
+    transform: scaleX(0);
+    transition-delay: 0.15s;
+  }
+  
+  .btn2:hover {
+    border: 2px solid #fefefe;
+  }
+  
+  .btn2 span {
+    position: relative;
+    z-index: 3;
+  }
+  
+  button {
+    text-decoration: none;
+    border: none;
+    background-color: transparent;
+  }
+
+   header {
+    background-color: #000000;
+    padding: 10px 0;
+  }
+  
+  nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+  }
+  
+  nav ul li {
+    display: inline;
+  }
+  
+  nav ul li button {
+    background-color: #555;
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 3px;
+    cursor: pointer;
+  }
+
+
+h1, h2{
+    text-align: center;
+    font-weight: 800;
+    color: rgb(255, 255, 255)
+}
+
+.wrapper{
+    width: 100%;
+    margin: 0 auto;
+}
+
+main{
+    display: block;
+    background: #000000;
+}
+
+.container{
+    width: 100%;
+    max-width: 760px;
+    margin: 0 auto;
+    padding: 0 20px;
+    animation: surgir 3s ease-out;
+    animation-timeline: view();
+    animation-range: cover 0 cover 50%;
+}
+
+section.modulo p{
+    margin-bottom: 40px;
+    text-align: justify;
+    font-size: 1.4em;
+}
+
+section.modulo h2{
+    margin-bottom: 40px;
+    font-size: 30px;
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+    text-align: center;
+}
+
+section.modulo.content {
+    padding: 40px 0;
+   background: #000000;
+}
+
+section.modulo.parallax{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100vh !important;
+    position: relative;
+    overflow: hidden;
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+section.modulo.parallax h1{
+    color: #ffffff;
+    text-shadow: 5px 5px 5px black;
+    font-size: 4em;
+    text-transform: uppercase;
+    text-align: center;
+    z-index: 50;
+}
+
+section.modulo.parallax:after {
+ content: "";
+ height: 100%;
+ width: 100%;
+ position: absolute;
+ z-index: 10;
+ background: linear-gradient(to bottom, rgba(0,0,0,0) 0, rgba(0,0,0,0) 40%, #000 100%  );
+
+}
+
+
+
+section.modulo.parallax-1{
+    background-image: url(https://beecrowd.io/wp-content/uploads/2022/08/Beecrowd-Agosto-6-02-larger.png);
+}
+section.modulo.parallax-2{
+    background-image: url(https://img.utdstc.com/screen/630/8a7/6308a7097370df7dd7f1cfb9a210229af08ed1071edd0aa5bee2010d57889d85:600);
+}
+section.modulo.parallax-3{
+    background-image: url(https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/iphone-mail-lead-1601302182.jpg?resize=640:*);
+}
+
+
+@keyframes surgir {
+    from{
+       opacity: 0;
+       translate: -100vw 0;
+    }
+
+    to{
+        opacity: 1;
+        translate: 0 0 ;
+    }
+}
+
+ @media all and (max-width: 760px){
+
+    section.modulo p{
+        margin-bottom: 10px;
+        text-align: center;
+        font-size: 1em;
+    }
+
+    section.modulo.parallax h1{
+        font-size: 1.5em;
+    }
+
+    section.modulo.content{
+        width: 90%;
+       background-color: #0f0f0f; 
+    }
+}
+ 
+
+
+p{
+    text-align: center;
+    margin-left: 38%;
+}
